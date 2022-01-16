@@ -1,25 +1,33 @@
 package jp.ac.uryukyu.ie.e215751;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 public class CommandSelector{
-    //public static void main(String[] args){
-    CommandSelector(){
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-
+    
+    public static void main(String[] args){
         System.out.println("キーボードから入力してください");
+        
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        
+        System.out.println("入力された文字は「" + num + "」です");
 
-        String str = null;
-        try{
-            str = br.readLine();
-            br.close();
-        }catch(IOException e){
-            e.printStackTrace();
+        ArrayList<Integer> player = new ArrayList<Integer>();
+
+        int len = String.valueOf(num).length();
+        int d = (int)Math.pow(10,len-1);
+
+        for(int i = 0; i < 3;i++){
+            player.add(num/d);
+            num %= d;
+            d/=10;
         }
+        System.out.println(player);
 
-        System.out.println("入力された文字は「" + str + "」です");
     }
+
+    
+    
+
 }
