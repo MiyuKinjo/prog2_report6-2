@@ -5,17 +5,20 @@ import java.util.ArrayList;
 
 public class Number {
     public static void main(String[] argas){
-        int eat = 0;
-        int bite = 0;
-
-        CommandSelector co = new CommandSelector();
-        co.selectNumber();
-        ArrayList<Integer> select = co.getSelect();
+        //int eat = 0;
+        //int bite = 0;
     
         MakeNumber mn = new MakeNumber();
         mn.makeNumber();
         ArrayList<Integer> list = mn.getList();
-            
+
+        while(true){
+            int eat = 0;
+            int bite = 0;
+            CommandSelector co = new CommandSelector();
+            co.selectNumber();
+            ArrayList<Integer> select = co.getSelect();
+    
             for(int i=0;i<3;i++){
                 for(int j=0;j<3;j++){
                     if(list.get(j)==select.get(i)){
@@ -28,10 +31,12 @@ public class Number {
                 }
             }
             System.out.println(eat+"eat,"+bite+"bite");
-    }
-
-    public void greet(){
-        System.out.println("hello");
+        
+        if(eat == 3){
+            System.out.println("正解です！");
+            break;
+        }
+        }
     }
 
 }

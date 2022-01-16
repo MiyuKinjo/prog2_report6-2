@@ -18,7 +18,7 @@ public class CommandSelector{
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         
-        System.out.println("入力された文字は「" + num + "」です");
+        //System.out.println("入力された文字は「" + num + "」です");
 
         //ArrayList<Integer> select = new ArrayList<Integer>();
     
@@ -30,6 +30,6 @@ public class CommandSelector{
             num %= d;
             d/=10;
         }
-        System.out.println(select);
+        //System.out.println(select);
     }
 }
