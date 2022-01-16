@@ -5,6 +5,11 @@ import java.util.Collections;
 
 public class Number {
     public static void main(String[] argas){
+
+        CommandSelector co = new CommandSelector();
+        co.selectNumber();
+        ArrayList<Integer> select = co.getSelect();
+    
         ArrayList<Integer> list = new ArrayList<Integer>();
         ArrayList<Integer> player = new ArrayList<Integer>();
 
@@ -15,8 +20,6 @@ public class Number {
 
         Collections.shuffle(list);
         Collections.shuffle(player);
-        //System.out.println(list);
-        //System.out.println(list.get(0));
 
         ArrayList<Integer> list_3 = new ArrayList<Integer>();
         ArrayList<Integer> player_list = new ArrayList<Integer>();
@@ -27,7 +30,7 @@ public class Number {
 
         }
         System.out.println(list_3);
-        System.out.println(player_list);
+        //System.out.println(player_list);
 
         //System.out.println(list_3.contains(1));
         //System.out.println(list_3.contains(player_list));
@@ -37,7 +40,7 @@ public class Number {
 
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++){
-                if(list_3.get(j)==player_list.get(i)){
+                if(list_3.get(j)==select.get(i)){
                     if(j==i){
                         eat++;
                     }else{
@@ -47,10 +50,7 @@ public class Number {
             }
         }
         System.out.println(eat+"eat,"+bite+"bite");
-
+        
     }
 
-    
-    
-    
 }
