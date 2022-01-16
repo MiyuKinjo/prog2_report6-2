@@ -29,21 +29,28 @@ public class Number {
         System.out.println(list_3);
         System.out.println(player_list);
 
-        System.out.println(list_3.contains(1));
-        System.out.println(list_3.contains(player_list));
+        //System.out.println(list_3.contains(1));
+        //System.out.println(list_3.contains(player_list));
 
-        int l = 0;
+        int eat = 0;
+        int bite = 0;
 
-        for(int k = 0;k<3;k++){
-            int a = list_3.get(k);
-            int b = player_list.get(k);
-           
-            if( a == b){
-                l++;
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(list_3.get(j)==player_list.get(i)){
+                    if(j==i){
+                        eat++;
+                    }else{
+                        bite++;
+                    }
+                }
             }
-
         }
-        System.out.println(l+"eat");
+        System.out.println(eat+"eat,"+bite+"bite");
 
     }
+
+    
+    
+    
 }
