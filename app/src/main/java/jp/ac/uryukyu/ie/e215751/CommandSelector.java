@@ -9,8 +9,7 @@ public class CommandSelector{
     public ArrayList<Integer> getSelect(){
         return select;
     }
-    
-    
+
     //public static void main(String[] args){
     public void selectNumber(){
         System.out.println("3桁の数字を入力してください");
