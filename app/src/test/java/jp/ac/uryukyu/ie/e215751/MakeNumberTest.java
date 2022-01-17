@@ -15,7 +15,7 @@ public class MakeNumberTest {
      */
     
      @Test
-    void MakeNumberTest(){
+    void makeNumberTest(){
         MakeNumber mn = new MakeNumber();
         mn.makeNumber();
         ArrayList<Integer> list = mn.getList();

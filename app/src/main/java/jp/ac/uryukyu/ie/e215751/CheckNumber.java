@@ -14,7 +14,8 @@ public class CheckNumber {
         MakeNumber mn = new MakeNumber();
         mn.makeNumber();
         ArrayList<Integer> list = mn.getList();
-
+        
+        //数字の種類と位置が一致するまで繰り返す。
         while(true){
             int eat = 0;
             int bite = 0;
@@ -35,6 +36,7 @@ public class CheckNumber {
             }
             System.out.println(eat+"eat,"+bite+"bite");
             
+        
         if(eat == 3){
             System.out.println("正解です！\n"+"ゲームを終了します！");
             break;

@@ -24,6 +24,8 @@ public class MakeNumber {
         for(int j = 0;j < 3;j++){
             list.add(ramdomList.get(j));
         }
-        System.out.println(list);
+
+        //　↓正解の数字を表示する。
+        //System.out.println(list);
     }
 }
