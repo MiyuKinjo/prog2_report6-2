@@ -10,16 +10,15 @@ public class CommandSelector{
         return select;
     }
 
-    //public static void main(String[] args){
+    /**
+     * プレイヤーが３桁の数を入力できるメソッド。
+     * 入力した数値を100の位、10の位、1の位に分けてリスト化する。
+     */
     public void selectNumber(){
         System.out.println("3桁の数字を入力してください");
         
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
-        
-        //System.out.println("入力された文字は「" + num + "」です");
-
-        //ArrayList<Integer> select = new ArrayList<Integer>();
     
         int len = String.valueOf(num).length();
         int d = (int)Math.pow(10,len-1);
@@ -29,6 +28,5 @@ public class CommandSelector{
             num %= d;
             d/=10;
         }
-        //System.out.println(select);
     }
 }

@@ -10,7 +10,9 @@ public class MakeNumber {
     public ArrayList<Integer> getList(){
         return list;
     }
-
+    /**
+     * 重複しない３桁の数をランダムに生成するメソッド。
+     */
     public void makeNumber(){
 
         for(int i = 0;i < 10;i++){
